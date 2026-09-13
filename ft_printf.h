@@ -6,7 +6,7 @@
 /*   By: jodehii <jodehii@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 17:43:58 by jodehii           #+#    #+#             */
-/*   Updated: 2026/09/11 17:52:36 by jodehii          ###   ########.fr       */
+/*   Updated: 2026/09/14 00:42:26 by jodehii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,9 @@
 # include "libfter/libft.h"
 
 int	ft_printf(const char *str, ...);
+int	print_c(int c);
+int	print_s(char *str);
+int	print_dec(int dec);
+int	print_x(long dec, char *hexa);
 
 #endif
