@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_x.c                                          :+:      :+:    :+:   */
+/*   print_p.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodehii <jodehii@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/13 21:33:28 by jodehii           #+#    #+#             */
-/*   Updated: 2026/09/15 00:18:14 by jodehii          ###   ########.fr       */
+/*   Created: 2026/09/15 00:25:51 by jodehii           #+#    #+#             */
+/*   Updated: 2026/09/15 00:26:11 by jodehii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <stdint.h>
 
-int	print_x(long dec, char *hexa)
+int	print_p(uintptr_t ptr, char *hexa)
 {
 	int		len;
 
 	len = 0;
-	if (dec < 16)
-		return (print_c(hexa[dec]));
+	if (ptr < 16)
+		return (print_c(hexa[ptr]));
 	else
 	{
-		len += print_x(dec / 16, hexa);
-		return (len + print_x(dec % 16, hexa));
+		len += print_p(ptr / 16, hexa);
+		return (len + print_p(ptr % 16, hexa));
 	}
 }
