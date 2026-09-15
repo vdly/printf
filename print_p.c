@@ -6,11 +6,11 @@
 /*   By: jodehii <jodehii@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 00:25:51 by jodehii           #+#    #+#             */
-/*   Updated: 2026/09/15 00:26:11 by jodehii          ###   ########.fr       */
+/*   Updated: 2026/09/15 18:29:29 by jodehii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdint.h>
+#include "ft_printf.h"
 
 int	print_p(uintptr_t ptr, char *hexa)
 {

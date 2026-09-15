@@ -6,7 +6,7 @@
 /*   By: jodehii <jodehii@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 17:43:58 by jodehii           #+#    #+#             */
-/*   Updated: 2026/09/15 17:37:22 by jodehii          ###   ########.fr       */
+/*   Updated: 2026/09/15 18:29:18 by jodehii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <stdint.h>
 # include "libfter/libft.h"
 
 int	ft_printf(const char *str, ...);
