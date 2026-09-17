@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_x.c                                          :+:      :+:    :+:   */
+/*   printing.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodehii <jodehii@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/13 21:33:28 by jodehii           #+#    #+#             */
-/*   Updated: 2026/09/17 17:38:30 by jodehii          ###   ########.fr       */
+/*   Created: 2026/09/12 18:50:12 by jodehii           #+#    #+#             */
+/*   Updated: 2026/09/12 19:08:37 by jodehii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_x(unsigned int dec, char *hexa)
+int	print_c(char c)
 {
-	int		len;
+	write(1, &c, 1);
+}
 
-	len = 0;
-	if (dec < 16)
-		return (print_c(hexa[dec]));
-	else
+void	print_s(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
 	{
-		len += print_x(dec / 16, hexa);
-		return (len + print_x(dec % 16, hexa));
+		write(1, &str[i], 1);
+		i++;
 	}
 }

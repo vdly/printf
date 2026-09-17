@@ -6,17 +6,19 @@
 /*   By: jodehii <jodehii@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 00:21:57 by jodehii           #+#    #+#             */
-/*   Updated: 2026/09/14 00:36:03 by jodehii          ###   ########.fr       */
+/*   Updated: 2026/09/16 23:31:17 by jodehii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_dec(int dec)
+int	print_dec(int d)
 {
-	int	len;
+	int		len;
+	long	dec;
 
 	len = 0;
+	dec = (long)d;
 	if (dec < 0)
 	{
 		dec *= -1;

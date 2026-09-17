@@ -6,7 +6,7 @@
 /*   By: jodehii <jodehii@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 17:43:48 by jodehii           #+#    #+#             */
-/*   Updated: 2026/09/15 23:44:41 by jodehii          ###   ########.fr       */
+/*   Updated: 2026/09/17 17:38:03 by jodehii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,15 @@ int	print_check(char format, va_list arg)
 	if (format == 's')
 		return (print_s(va_arg(arg, char *)));
 	if (format == 'p')
-	{
-		write(1, "0x", 2);
-		return (print_p(va_arg(arg, uintptr_t), "0123456789abcdef") + 2);
-	}
+		return (print_p(va_arg(arg, uintptr_t), "0123456789abcdef"));
 	if (format == 'd' || format == 'i')
 		return (print_dec(va_arg(arg, int)));
 	if (format == 'u')
 		return (print_u(va_arg(arg, unsigned int)));
 	if (format == 'x')
-		return (print_x(va_arg(arg, long), "0123456789abcdef"));
+		return (print_x(va_arg(arg, unsigned int), "0123456789abcdef"));
 	if (format == 'X')
-		return (print_x(va_arg(arg, long), "0123456789ABCDEF"));
+		return (print_x(va_arg(arg, unsigned int), "0123456789ABCDEF"));
 	if (format == '%')
 		return (print_c('%'));
 	else
@@ -40,7 +37,7 @@ int	print_check(char format, va_list arg)
 int	ft_printf(const char *str, ...)
 {
 	va_list	args;
-	int 	len;
+	int		len;
 
 	len = 0;
 	va_start(args, str);

@@ -6,7 +6,7 @@
 /*   By: jodehii <jodehii@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 17:43:58 by jodehii           #+#    #+#             */
-/*   Updated: 2026/09/15 18:29:18 by jodehii          ###   ########.fr       */
+/*   Updated: 2026/09/17 17:38:46 by jodehii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	print_c(int c);
 int	print_s(char *str);
 int	print_dec(int dec);
 int	print_u(unsigned int dec);
-int	print_x(long dec, char *hexa);
+int	print_x(unsigned int dec, char *hexa);
 int	print_p(uintptr_t ptr, char *hexa);
 
 #endif
